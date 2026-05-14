@@ -18,7 +18,6 @@
                     },
                     fontFamily: {
                         serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
-                        mono: ['"Courier New"', 'monospace'],
                     },
                 }
             }
@@ -52,20 +51,16 @@
     <nav class="sticky top-0 z-50 bg-ink/95 text-paper backdrop-blur-sm border-b border-accent/30">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <a href="#" class="text-2xl font-bold tracking-widest text-shadow-dark">流士白龙</a>
+                <a href="#home" class="text-2xl font-bold tracking-widest text-shadow-dark">流士白龙</a>
                 
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.home">首页</a>
-                    <a href="#works" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.works">作品</a>
-                    <a href="#diary" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.diary">手记</a>
-                    <a href="#illustrations" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.illustrations">影与声</a>
-                    <a href="#quiz" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.quiz">我猜猜你是什么人</a>
-                    <a href="#gallery" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.gallery">留痕</a>
-                    <a href="#guestbook" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors" data-i18n="nav.guestbook">留言</a>
-                    <button id="lang-toggle" class="text-paper/80 hover:text-accent font-medium flex items-center transition-colors">
-                        <i class="fas fa-globe mr-1"></i>
-                        <span data-i18n="lang.switch">EN</span>
-                    </button>
+                    <a href="#home" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">首页</a>
+                    <a href="#works" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">作品</a>
+                    <a href="#diary" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">手记</a>
+                    <a href="#illustrations" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">影与声</a>
+                    <a href="#quiz" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">我猜猜你是什么人</a>
+                    <a href="#gallery" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">留痕</a>
+                    <a href="#guestbook" class="nav-link text-paper/80 hover:text-accent font-medium transition-colors">留言</a>
                 </div>
                 
                 <button id="menu-btn" class="md:hidden text-paper/80 focus:outline-none">
@@ -75,17 +70,13 @@
             
             <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-accent/30">
                 <div class="flex flex-col space-y-3 pt-3">
-                    <a href="#home" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.home">首页</a>
-                    <a href="#works" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.works">作品</a>
-                    <a href="#diary" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.diary">手记</a>
-                    <a href="#illustrations" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.illustrations">影与声</a>
-                    <a href="#quiz" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.quiz">我猜猜你是什么人</a>
-                    <a href="#gallery" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.gallery">留痕</a>
-                    <a href="#guestbook" class="nav-link text-paper/80 hover:text-accent font-medium py-2" data-i18n="nav.guestbook">留言</a>
-                    <button id="lang-toggle-mobile" class="text-paper/80 hover:text-accent font-medium py-2 flex items-center">
-                        <i class="fas fa-globe mr-1"></i>
-                        <span data-i18n="lang.switch">EN</span>
-                    </button>
+                    <a href="#home" class="nav-link text-paper/80 hover:text-accent font-medium py-2">首页</a>
+                    <a href="#works" class="nav-link text-paper/80 hover:text-accent font-medium py-2">作品</a>
+                    <a href="#diary" class="nav-link text-paper/80 hover:text-accent font-medium py-2">手记</a>
+                    <a href="#illustrations" class="nav-link text-paper/80 hover:text-accent font-medium py-2">影与声</a>
+                    <a href="#quiz" class="nav-link text-paper/80 hover:text-accent font-medium py-2">我猜猜你是什么人</a>
+                    <a href="#gallery" class="nav-link text-paper/80 hover:text-accent font-medium py-2">留痕</a>
+                    <a href="#guestbook" class="nav-link text-paper/80 hover:text-accent font-medium py-2">留言</a>
                 </div>
             </div>
         </div>
@@ -95,16 +86,16 @@
         <!-- 首页 -->
         <section id="home" class="mb-16">
             <div class="bg-ink/90 text-paper rounded-xl shadow-lg p-8 md:p-12 text-center mb-8 paper-texture border border-accent/20">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow-dark tracking-widest">流士白龙</h1>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow-dark tracking-widest" id="author-name">流士白龙</h1>
                 <div class="h-1 w-24 bg-accent mx-auto mb-8"></div>
-                <p class="text-xl text-paper/80 max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="bio">
+                <p class="text-xl text-paper/80 max-w-2xl mx-auto mb-8 leading-relaxed" id="author-bio">
                     悬疑故事讲述者，以九十年代为底色，铺陈记忆、谎言与无法醒来的谜。
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#works" class="bg-accent hover:bg-accent/80 text-white font-bold py-3 px-6 rounded transition duration-300" data-i18n="button.viewWorks">
+                    <a href="#works" class="bg-accent hover:bg-accent/80 text-white font-bold py-3 px-6 rounded transition duration-300">
                         查看《昏谜》
                     </a>
-                    <a href="#quiz" class="bg-paper/20 hover:bg-paper/30 text-paper font-bold py-3 px-6 rounded transition duration-300" data-i18n="button.takeQuiz">
+                    <a href="#quiz" class="bg-paper/20 hover:bg-paper/30 text-paper font-bold py-3 px-6 rounded transition duration-300">
                         测测你是什么人
                     </a>
                 </div>
@@ -114,19 +105,19 @@
             <div class="bg-yellow-100 border-l-4 border-yellow-600 p-6 rounded-r-lg mb-8">
                 <h3 class="text-xl font-bold text-yellow-800 mb-3">
                     <i class="fas fa-exclamation-triangle mr-2"></i>
-                    <span data-i18n="copyright.title">版权声明</span>
+                    版权声明
                 </h3>
-                <p class="text-yellow-700 mb-2" data-i18n="copyright.line1">
+                <p class="text-yellow-700 mb-2">
                     本网站展示的小说作品《昏谜》，已<strong>独家签约番茄小说</strong>。
                 </p>
-                <p class="text-yellow-700 mb-2" data-i18n="copyright.line2">
+                <p class="text-yellow-700 mb-2">
                     该作品全球范围内的全部著作财产权，独家授权给北京臻鼎科技有限公司所有。
                 </p>
-                <p class="text-yellow-700 mb-2" data-i18n="copyright.line3">
+                <p class="text-yellow-700 mb-2">
                     本网站仅用于作者个人创作交流与作品宣传，不提供任何作品的完整阅读或下载服务。
                     完整正版内容请前往番茄小说APP阅读。
                 </p>
-                <p class="text-yellow-700" data-i18n="copyright.line4">
+                <p class="text-yellow-700">
                     未经平台书面授权，任何单位或个人不得转载、复制、传播本作品的任何内容。
                 </p>
             </div>
@@ -136,31 +127,11 @@
         <section id="works" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-book mr-2"></i>
-                <span data-i18n="section.works">作品</span>
+                作品
             </h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden card-hover border border-ink/10">
-                    <div class="md:flex">
-                        <div class="md:w-1/3">
-                            <img src="your-book-cover.jpg" alt="《昏谜》封面" class="w-full h-64 md:h-full object-cover sepia">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <h3 class="text-2xl font-bold text-ink mb-3">《昏谜》</h3>
-                            <p class="text-faded mb-4" data-i18n="work.desc">
-                                九十年代的南方小城，少年在医院醒来，记忆成谜，过去成了一道无法解开的谜题。
-                            </p>
-                            <div class="flex items-center text-sm text-faded mb-4">
-                                <span class="mr-4" data-i18n="work.genre"><i class="fas fa-tag mr-1"></i>悬疑 / 年代 / 记忆</span>
-                                <span data-i18n="work.status"><i class="fas fa-pen-fancy mr-1"></i>连载中</span>
-                            </div>
-                            <a href="https://fanqienovel.com/page/你的作品ID" target="_blank" 
-                               class="inline-block bg-accent hover:bg-accent/80 text-white font-bold py-2 px-4 rounded transition duration-300" data-i18n="button.readOnFanqie">
-                                前往番茄小说阅读正版
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div id="works-container" class="grid md:grid-cols-2 gap-8">
+                <div class="text-center py-8 text-faded">加载中...</div>
             </div>
         </section>
 
@@ -168,28 +139,11 @@
         <section id="diary" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-pencil-alt mr-2"></i>
-                <span data-i18n="section.diary">创作手记</span>
+                创作手记
             </h2>
             
-            <div class="space-y-8">
-                <article class="bg-white/90 rounded-xl shadow-lg p-6 card-hover border border-ink/10">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-2xl font-bold text-ink" data-i18n="diary.title1">关于《昏谜》中秦卫这个角色的创作思路</h3>
-                        <span class="text-faded text-sm">2026-05-15</span>
-                    </div>
-                    <div class="prose max-w-none text-faded mb-4 leading-relaxed" data-i18n="diary.content1">
-                        <p>失忆不是设定，而是视角。当一个人失去过去，他与读者便站在了同一条起跑线，一起拼凑记忆的碎片。</p>
-                    </div>
-                    <button class="text-accent hover:text-accent/80 font-medium transition-colors" data-i18n="button.readMore">
-                        阅读全文 <i class="fas fa-arrow-right ml-1"></i>
-                    </button>
-                </article>
-            </div>
-
-            <div class="text-center mt-8">
-                <button class="bg-ink/10 hover:bg-ink/20 text-ink font-bold py-2 px-6 rounded transition duration-300" data-i18n="button.viewMoreDiary">
-                    查看更多手记
-                </button>
+            <div id="diary-container" class="space-y-8">
+                <div class="text-center py-8 text-faded">加载中...</div>
             </div>
         </section>
 
@@ -197,35 +151,23 @@
         <section id="illustrations" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-paint-brush mr-2"></i>
-                <span data-i18n="section.illustrations">影与声</span>
+                影与声
             </h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden card-hover border border-ink/10">
-                    <img src="illustration1.jpg" alt="医院醒来" class="w-full h-48 object-cover sepia">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold text-ink mb-2" data-i18n="illustration.title1">第一章：醒来</h3>
-                        <p class="text-faded text-sm mb-3" data-i18n="illustration.desc1">
-                            消毒水的味道刺鼻，天花板是模糊的白色，记忆一片空白。
-                        </p>
-                        <audio controls class="w-full">
-                            <source src="audio1.mp3" type="audio/mpeg">
-                            <span data-i18n="audio.notSupport">您的浏览器不支持音频播放。</span>
-                        
-                    </div>
-                </div>
+            <div id="illustrations-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center py-8 text-faded">加载中...</div>
             </div>
         </section>
 
-        <!-- 我猜猜你是什么人 - 性格智商评测 -->
+        <!-- 性格测试 -->
         <section id="quiz" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-question-circle mr-2"></i>
-                <span data-i18n="section.quiz">我猜猜你是什么人</span>
+                我猜猜你是什么人
             </h2>
             
             <div class="bg-white/90 rounded-xl shadow-lg p-6 border border-ink/10">
-                <p class="text-faded mb-6 text-center" data-i18n="quiz.intro">
+                <p class="text-faded mb-6 text-center">
                     选择你第一眼看到就喜欢的图片，我会猜出你的性格和智商类型。
                     这不是科学测试，只是一个有趣的游戏。
                 </p>
@@ -289,16 +231,11 @@
         <section id="gallery" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-camera mr-2"></i>
-                <span data-i18n="section.gallery">留痕</span>
+                留痕
             </h2>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item border border-ink/10">
-                    <img src="photo1.jpg" alt="写作日常" class="w-full h-48 object-cover sepia">
-                </div>
-                <div class="rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item border border-ink/10">
-                    <img src="photo2.jpg" alt="老街巷" class="w-full h-48 object-cover sepia">
-                </div>
+            <div id="gallery-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="text-center py-8 text-faded">加载中...</div>
             </div>
         </section>
 
@@ -306,17 +243,17 @@
         <section id="guestbook" class="mb-16">
             <h2 class="text-3xl font-bold text-ink mb-8 pb-2 border-b-2 border-accent inline-block">
                 <i class="fas fa-comments mr-2"></i>
-                <span data-i18n="section.guestbook">留言</span>
+                留言
             </h2>
             
             <div class="bg-white/90 rounded-xl shadow-lg p-6 mb-8 border border-ink/10">
-                <h3 class="text-xl font-bold text-ink mb-4" data-i18n="guestbook.title">留下你的痕迹</h3>
-                <p class="text-faded mb-6" data-i18n="guestbook.desc">
+                <h3 class="text-xl font-bold text-ink mb-4">留下你的痕迹</h3>
+                <p class="text-faded mb-6">
                     欢迎在这里留下你的阅读感想、建议或者想说的话。我会认真阅读每一条留言。
                 </p>
                 
                 <div class="giscus">
-                    <p class="text-center text-faded py-8" data-i18n="guestbook.loading">
+                    <p class="text-center text-faded py-8">
                         留言板加载中...<br>
                         如果长时间无法加载，请检查网络连接。
                     </p>
@@ -331,7 +268,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-2xl font-bold mb-2 tracking-widest">流士白龙</h3>
-                    <p class="text-paper/60" data-i18n="footer.tagline">悬疑故事讲述者 | 九十年代谜案记录者</p>
+                    <p class="text-paper/60">悬疑故事讲述者 | 九十年代谜案记录者</p>
                 </div>
                 
                 <div class="flex space-x-6">
@@ -353,8 +290,8 @@
             <hr class="border-paper/20 my-6">
             
             <div class="text-center text-paper/40 text-sm">
-                <p data-i18n="footer.copyright">&copy; 2026 流士白龙 个人主页 | 所有签约作品版权归对应平台所有</p>
-                <p class="mt-2" data-i18n="footer.disclaimer">本网站仅用于作者个人创作交流与作品宣传，不提供任何商业服务</p>
+                <p>&copy; 2026 流士白龙 个人主页 | 所有签约作品版权归对应平台所有</p>
+                <p class="mt-2">本网站仅用于作者个人创作交流与作品宣传，不提供任何商业服务</p>
             </div>
         </div>
     </footer>
@@ -369,282 +306,339 @@
 
     <!-- JavaScript -->
     <script>
-        // 翻译功能
-        const translations = {
-            'zh-CN': {
-                'lang.switch': 'EN',
-                'nav.home': '首页',
-                'nav.works': '作品',
-                'nav.diary': '手记',
-                'nav.illustrations': '影与声',
-                'nav.quiz': '我猜猜你是什么人',
-                'nav.gallery': '留痕',
-                'nav.guestbook': '留言',
-                'bio': '悬疑故事讲述者，以九十年代为底色，铺陈记忆、谎言与无法醒来的谜。',
-                'button.viewWorks': '查看《昏谜》',
-                'button.leaveMessage': '留下痕迹',
-                'button.takeQuiz': '测测你是什么人',
-                'button.readMore': '阅读全文',
-                'button.viewMoreDiary': '查看更多手记',
-                'button.readOnFanqie': '前往番茄小说阅读正版',
-                'copyright.title': '版权声明',
-                'copyright.line1': '本网站展示的小说作品《昏谜》，已<strong>独家签约番茄小说</strong>。',
-                'copyright.line2': '该作品全球范围内的全部著作财产权，独家授权给北京臻鼎科技有限公司所有。',
-                'copyright.line3': '本网站仅用于作者个人创作交流与作品宣传，不提供任何作品的完整阅读或下载服务。完整正版内容请前往番茄小说APP阅读。',
-                'copyright.line4': '未经平台书面授权，任何单位或个人不得转载、复制、传播本作品的任何内容。',
-                'section.works': '作品',
-                'section.diary': '创作手记',
-                'section.illustrations': '影与声',
-                'section.quiz': '我猜猜你是什么人',
-                'section.gallery': '留痕',
-                'section.guestbook': '留言',
-                'work.desc': '九十年代的南方小城，少年在医院醒来，记忆成谜，过去成了一道无法解开的谜题。',
-                'work.genre': '悬疑 / 年代 / 记忆',
-                'work.status': '连载中',
-                'diary.title1': '关于《昏谜》中秦卫这个角色的创作思路',
-                'diary.content1': '失忆不是设定，而是视角。当一个人失去过去，他与读者便站在了同一条起跑线，一起拼凑记忆的碎片。',
-                'illustration.title1': '第一章：醒来',
-                'illustration.desc1': '消毒水的味道刺鼻，天花板是模糊的白色，记忆一片空白。',
-                'audio.notSupport': '您的浏览器不支持音频播放。',
-                'quiz.intro': '选择你第一眼看到就喜欢的图片，我会猜出你的性格和智商类型。这不是科学测试，只是一个有趣的游戏。',
-                'guestbook.title': '留下你的痕迹',
-                'guestbook.desc': '欢迎在这里留下你的阅读感想、建议或者想说的话。我会认真阅读每一条留言。',
-                'guestbook.loading': '留言板加载中...<br>如果长时间无法加载，请检查网络连接。',
-                'footer.tagline': '悬疑故事讲述者 | 九十年代谜案记录者',
-                'footer.copyright': '&copy; 2026 流士白龙 个人主页 | 所有签约作品版权归对应平台所有',
-                'footer.disclaimer': '本网站仅用于作者个人创作交流与作品宣传，不提供任何商业服务'
-            },
-            'en': {
-                'lang.switch': '中文',
-                'nav.home': 'Home',
-                'nav.works': 'Works',
-                'nav.diary': 'Notes',
-                'nav.illustrations': 'Art & Audio',
-                'nav.quiz': 'Who Are You?',
-                'nav.gallery': 'Traces',
-                'nav.guestbook': 'Guestbook',
-                'bio': 'A mystery storyteller, weaving tales of memory, lies, and unsolved puzzles set against the backdrop of the 1990s.',
-                'button.viewWorks': 'View "Coma"',
-                'button.leaveMessage': 'Leave a Trace',
-                'button.takeQuiz': 'Take the Quiz',
-                'button.readMore': 'Read Full',
-                'button.viewMoreDiary': 'View More Notes',
-                'button.readOnFanqie': 'Read on Fanqie Novel',
-                'copyright.title': 'Copyright Notice',
-                'copyright.line1': 'The novel "Coma" displayed on this website has been <strong>exclusively signed with Fanqie Novel</strong>.',
-                'copyright.line2': 'All property rights of the work worldwide are exclusively licensed to Beijing Zhending Technology Co., Ltd.',
-                'copyright.line3': 'This website is only used for author\'s personal creative communication and work promotion. It does not provide complete reading or download services for any works. Please go to the Fanqie Novel APP to read the full legitimate content.',
-                'copyright.line4': 'Without written authorization from the platform, no unit or individual may reproduce, copy, or disseminate any content of this work.',
-                'section.works': 'Works',
-                'section.diary': 'Writing Notes',
-                'section.illustrations': 'Art & Audio',
-                'section.quiz': 'Who Are You?',
-                'section.gallery': 'Traces',
-                'section.guestbook': 'Guestbook',
-                'work.desc': 'A teenager wakes up in a hospital in a southern city in the 1990s with no memory, his past an unsolved puzzle.',
-                'work.genre': 'Suspense / Period / Memory',
-                'work.status': 'Serializing',
-                'diary.title1': 'Thoughts on the Character Qin Wei in "Coma"',
-                'diary.content1': 'Amnesia is not just a plot device, but a perspective. When the protagonist loses his past, he stands on the same starting line as the readers, piecing together fragments of memory together.',
-                'illustration.title1': 'Chapter 1: Waking Up',
-                'illustration.desc1': 'The smell of disinfectant stings, the ceiling is a blur of white, and his mind is completely blank.',
-                'audio.notSupport': 'Your browser does not support audio playback.',
-                'quiz.intro': 'Choose the image you like at first sight, and I will guess your personality and thinking type. This is not a scientific test, just a fun game.',
-                'guestbook.title': 'Leave Your Trace',
-                'guestbook.desc': 'Feel free to leave your reading thoughts, suggestions, or anything you want to say to me. I will read every message carefully.',
-                'guestbook.loading': 'Loading guestbook...<br>If it doesn\'t load for a long time, please check your network connection.',
-                'footer.tagline': 'Mystery Storyteller | 1990s Case Recorder',
-                'footer.copyright': '&copy; 2026 Liushi Bailong Personal Homepage | All signed works belong to the respective platforms',
-                'footer.disclaimer': 'This website is only used for author\'s personal creative communication and work promotion, no commercial services are provided'
+        // 全局数据变量
+        let siteData = {};
+
+        // 页面加载完成后执行
+        window.addEventListener('load', async () => {
+            await loadSiteData();
+            renderAllContent();
+            initAllFunctions();
+        });
+
+        // 加载数据
+        async function loadSiteData() {
+            try {
+                const response = await fetch('/admin/content.json');
+                if (response.ok) {
+                    siteData = await response.json();
+                } else {
+                    siteData = getDefaultData();
+                }
+            } catch (error) {
+                siteData = getDefaultData();
             }
-        };
-
-        let currentLang = localStorage.getItem('lang') || navigator.language || 'zh-CN';
-        if (!translations[currentLang]) {
-            currentLang = 'zh-CN';
         }
 
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('lang', lang);
+        // 默认数据
+        function getDefaultData() {
+            return {
+                "author": {
+                    "name": "流士白龙",
+                    "bio": "悬疑故事讲述者，以九十年代为底色，铺陈记忆、谎言与无法醒来的谜。"
+                },
+                "works": [
+                    {
+                        "title": "《昏谜》",
+                        "description": "九十年代的南方小城，少年在医院醒来，记忆成谜，过去成了一道无法解开的谜题。",
+                        "cover": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400",
+                        "link": "https://fanqienovel.com/page/你的作品ID",
+                        "genre": "悬疑 / 年代 / 记忆",
+                        "status": "连载中"
+                    }
+                ],
+                "diaries": [
+                    {
+                        "title": "关于《昏谜》中秦卫这个角色的创作思路",
+                        "date": "2026-05-15",
+                        "content": "失忆不是设定，而是视角。当一个人失去过去，他与读者便站在了同一条起跑线，一起拼凑记忆的碎片。"
+                    }
+                ],
+                "illustrations": [
+                    {
+                        "title": "第一章：醒来",
+                        "description": "消毒水的味道刺鼻，天花板是模糊的白色，记忆一片空白。",
+                        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=400",
+                        "audio": ""
+                    }
+                ],
+                "gallery": [
+                    "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=400",
+                    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400"
+                ]
+            };
+        }
+
+        // 渲染所有内容
+        function renderAllContent() {
+            renderAuthorInfo();
+            renderWorks();
+            renderDiaries();
+            renderIllustrations();
+            renderGallery();
+        }
+
+        // 渲染作者信息
+        function renderAuthorInfo() {
+            if (siteData.author) {
+                document.getElementById('author-name').textContent = siteData.author.name;
+                document.getElementById('author-bio').textContent = siteData.author.bio;
+            }
+        }
+
+        // 渲染作品
+        function renderWorks() {
+            const container = document.getElementById('works-container');
+            if (!siteData.works || siteData.works.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-faded">暂无作品</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            siteData.works.forEach(work => {
+                const workCard = document.createElement('div');
+                workCard.className = 'bg-white/90 rounded-xl shadow-lg overflow-hidden card-hover border border-ink/10';
+                workCard.innerHTML = `
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="${work.cover}" alt="${work.title}封面" class="w-full h-64 md:h-full object-cover sepia">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <h3 class="text-2xl font-bold text-ink mb-3">${work.title}</h3>
+                            <p class="text-faded mb-4">${work.description}</p>
+                            <div class="flex items-center text-sm text-faded mb-4">
+                                <span class="mr-4"><i class="fas fa-tag mr-1"></i>${work.genre}</span>
+                                <span><i class="fas fa-pen-fancy mr-1"></i>${work.status}</span>
+                            </div>
+                            <a href="${work.link}" target="_blank" 
+                               class="inline-block bg-accent hover:bg-accent/80 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                前往番茄小说阅读正版
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(workCard);
+            });
+        }
+
+        // 渲染创作手记
+        function renderDiaries() {
+            const container = document.getElementById('diary-container');
+            if (!siteData.diaries || siteData.diaries.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-faded">暂无手记</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            // 按日期倒序排列
+            const sortedDiaries = siteData.diaries.sort((a, b) => new Date(b.date) - new Date(a.date));
             
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
+            sortedDiaries.forEach(diary => {
+                const diaryCard = document.createElement('article');
+                diaryCard.className = 'bg-white/90 rounded-xl shadow-lg p-6 card-hover border border-ink/10';
+                diaryCard.innerHTML = `
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-ink">${diary.title}</h3>
+                        <span class="text-faded text-sm">${diary.date}</span>
+                    </div>
+                    <div class="prose max-w-none text-faded mb-4 leading-relaxed">
+                        ${diary.content}
+                    </div>
+                `;
+                container.appendChild(diaryCard);
             });
-
-            document.documentElement.lang = lang;
         }
 
-        document.getElementById('lang-toggle').addEventListener('click', () => {
-            setLanguage(currentLang === 'zh-CN' ? 'en' : 'zh-CN');
-        });
+        // 渲染插图配音
+        function renderIllustrations() {
+            const container = document.getElementById('illustrations-container');
+            if (!siteData.illustrations || siteData.illustrations.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-faded">暂无插图</div>';
+                return;
+            }
 
-        document.getElementById('lang-toggle-mobile').addEventListener('click', () => {
-            setLanguage(currentLang === 'zh-CN' ? 'en' : 'zh-CN');
-        });
-
-        setLanguage(currentLang);
-
-        // 移动端菜单切换
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    mobileMenu.classList.add('hidden');
-                }
+            container.innerHTML = '';
+            siteData.illustrations.forEach(illustration => {
+                const illuCard = document.createElement('div');
+                illuCard.className = 'bg-white/90 rounded-xl shadow-lg overflow-hidden card-hover border border-ink/10';
+                illuCard.innerHTML = `
+                    <img src="${illustration.image}" alt="${illustration.title}" class="w-full h-48 object-cover sepia">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">${illustration.title}</h3>
+                        <p class="text-faded text-sm mb-3">${illustration.description}</p>
+                        ${illustration.audio ? `
+                            <audio controls class="w-full">
+                                <source src="${illustration.audio}" type="audio/mpeg">
+                                您的浏览器不支持音频播放。
+                            
+                        ` : ''}
+                    </div>
+                `;
+                container.appendChild(illuCard);
             });
-        });
+        }
 
-        // 图片灯箱功能
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeLightbox = document.getElementById('close-lightbox');
+        // 渲染相册
+        function renderGallery() {
+            const container = document.getElementById('gallery-container');
+            if (!siteData.gallery || siteData.gallery.length === 0) {
+                container.innerHTML = '<div class="text-center py-8 text-faded">暂无照片</div>';
+                return;
+            }
 
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const imgSrc = item.querySelector('img').src;
-                lightboxImg.src = imgSrc;
-                lightbox.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
+            container.innerHTML = '';
+            siteData.gallery.forEach(photo => {
+                const photoCard = document.createElement('div');
+                photoCard.className = 'rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item border border-ink/10';
+                photoCard.innerHTML = `<img src="${photo}" alt="照片" class="w-full h-48 object-cover sepia">`;
+                container.appendChild(photoCard);
             });
-        });
 
-        closeLightbox.addEventListener('click', () => {
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        });
+            initLightbox();
+        }
 
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
+        // 初始化所有功能
+        function initAllFunctions() {
+            initNavigation();
+            initLightbox();
+            initQuiz();
+            initGiscus();
+        }
+
+        // 初始化导航
+        function initNavigation() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // 初始化图片灯箱
+        function initLightbox() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeLightbox = document.getElementById('close-lightbox');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').src;
+                    lightboxImg.src = imgSrc;
+                    lightbox.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeLightbox.addEventListener('click', () => {
                 lightbox.classList.add('hidden');
                 document.body.style.overflow = 'auto';
-            }
-        });
+            });
 
-        // ==================== 性格智商评测功能（已修复变量冲突） ====================
-        const quizQuestionsData = [
-            {
-                text: "你更喜欢哪种天气？",
-                options: [
-                    { image: "https://images.unsplash.com/photo-1501908734255-16579c18c27f?q=80&w=400", value: { rational: 2, introvert: 1 } },
-                    { image: "https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=400", value: { emotional: 2, extrovert: 1 } },
-                    { image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=400", value: { adventurous: 2, creative: 1 } },
-                    { image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400", value: { cautious: 2, logical: 1 } }
-                ]
-            },
-            {
-                text: "你更喜欢哪种水果？",
-                options: [
-                    { image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=400", value: { emotional: 2, creative: 1 } },
-                    { image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?q=80&w=400", value: { rational: 2, cautious: 1 } },
-                    { image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=400", value: { extrovert: 2, adventurous: 1 } },
-                    { image: "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=400", value: { introvert: 2, logical: 1 } }
-                ]
-            },
-            {
-                text: "你更喜欢哪种动物？",
-                options: [
-                    { image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=400", value: { introvert: 2, cautious: 1 } },
-                    { image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=400", value: { extrovert: 2, emotional: 1 } },
-                    { image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?q=80&w=400", value: { adventurous: 2, creative: 1 } },
-                    { image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=400", value: { rational: 2, logical: 1 } }
-                ]
-            },
-            {
-                text: "你更喜欢哪种颜色？",
-                options: [
-                    { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400", value: { emotional: 2, introvert: 1 } },
-                    { image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400", value: { rational: 2, cautious: 1 } },
-                    { image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=400", value: { adventurous: 2, extrovert: 1 } },
-                    { image: "https://images.unsplash.com/photo-1506905925346-21bda4d3264c?q=80&w=400", value: { creative: 2, logical: 1 } }
-                ]
-            },
-            {
-                text: "你更喜欢哪种风景？",
-                options: [
-                    { image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400", value: { introvert: 2, creative: 1 } },
-                    { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400", value: { extrovert: 2, emotional: 1 } },
-                    { image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=400", value: { adventurous: 2, logical: 1 } },
-                    { image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=400", value: { cautious: 2, rational: 1 } }
-                ]
-            }
-        ];
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
 
-        const quizResults = [
-            {
-                title: "冷静的观察者",
-                description: "你是一个非常理性和冷静的人，善于观察和分析。你不喜欢冲动行事，总是会仔细思考后再做决定。你的逻辑思维能力很强，能够快速发现问题的本质。",
-                personality: "理性+内向+谨慎",
-                thinking: "逻辑分析型"
-            },
-            {
-                title: "热情的探索者",
-                description: "你是一个充满活力和好奇心的人，喜欢尝试新事物。你性格开朗，善于与人交往，总是能给周围的人带来快乐。你的创造力很强，思维活跃。",
-                personality: "感性+外向+冒险",
-                thinking: "直觉创造型"
-            },
-            {
-                title: "深沉的思考者",
-                description: "你是一个内心世界非常丰富的人，喜欢独处和思考。你对事物有自己独特的见解，不随波逐流。你的观察力敏锐，能够注意到别人忽略的细节。",
-                personality: "理性+内向+创造",
-                thinking: "深度思考型"
-            },
-            {
-                title: "可靠的守护者",
-                description: "你是一个非常可靠和负责任的人，总是会认真完成自己的任务。你性格稳重，做事踏实，是朋友们可以信赖的对象。你有很强的责任感和正义感。",
-                personality: "感性+外向+谨慎",
-                thinking: "务实可靠型"
-            }
-        ];
+        // 初始化性格测试
+        function initQuiz() {
+            const quizQuestionsData = [
+                {
+                    text: "你更喜欢哪种天气？",
+                    options: [
+                        { image: "https://images.unsplash.com/photo-1501908734255-16579c18c27f?q=80&w=400", value: { rational: 2, introvert: 1 } },
+                        { image: "https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=400", value: { emotional: 2, extrovert: 1 } },
+                        { image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=400", value: { adventurous: 2, creative: 1 } },
+                        { image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400", value: { cautious: 2, logical: 1 } }
+                    ]
+                },
+                {
+                    text: "你更喜欢哪种水果？",
+                    options: [
+                        { image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=400", value: { emotional: 2, creative: 1 } },
+                        { image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?q=80&w=400", value: { rational: 2, cautious: 1 } },
+                        { image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=400", value: { extrovert: 2, adventurous: 1 } },
+                        { image: "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=400", value: { introvert: 2, logical: 1 } }
+                    ]
+                },
+                {
+                    text: "你更喜欢哪种动物？",
+                    options: [
+                        { image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=400", value: { introvert: 2, cautious: 1 } },
+                        { image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=400", value: { extrovert: 2, emotional: 1 } },
+                        { image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?q=80&w=400", value: { adventurous: 2, creative: 1 } },
+                        { image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=400", value: { rational: 2, logical: 1 } }
+                    ]
+                },
+                {
+                    text: "你更喜欢哪种颜色？",
+                    options: [
+                        { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400", value: { emotional: 2, introvert: 1 } },
+                        { image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400", value: { rational: 2, cautious: 1 } },
+                        { image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=400", value: { adventurous: 2, extrovert: 1 } },
+                        { image: "https://images.unsplash.com/photo-1506905925346-21bda4d3264c?q=80&w=400", value: { creative: 2, logical: 1 } }
+                    ]
+                },
+                {
+                    text: "你更喜欢哪种风景？",
+                    options: [
+                        { image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400", value: { introvert: 2, creative: 1 } },
+                        { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400", value: { extrovert: 2, emotional: 1 } },
+                        { image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=400", value: { adventurous: 2, logical: 1 } },
+                        { image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=400", value: { cautious: 2, rational: 1 } }
+                    ]
+                }
+            ];
 
-        let currentQuestionIndex = 0;
-        let userScores = {
-            rational: 0,
-            emotional: 0,
-            introvert: 0,
-            extrovert: 0,
-            cautious: 0,
-            adventurous: 0,
-            logical: 0,
-            creative: 0
-        };
+            const quizResults = [
+                {
+                    title: "冷静的观察者",
+                    description: "你是一个非常理性和冷静的人，善于观察和分析。你不喜欢冲动行事，总是会仔细思考后再做决定。你的逻辑思维能力很强，能够快速发现问题的本质。",
+                    personality: "理性+内向+谨慎",
+                    thinking: "逻辑分析型"
+                },
+                {
+                    title: "热情的探索者",
+                    description: "你是一个充满活力和好奇心的人，喜欢尝试新事物。你性格开朗，善于与人交往，总是能给周围的人带来快乐。你的创造力很强，思维活跃。",
+                    personality: "感性+外向+冒险",
+                    thinking: "直觉创造型"
+                },
+                {
+                    title: "深沉的思考者",
+                    description: "你是一个内心世界非常丰富的人，喜欢独处和思考。你对事物有自己独特的见解，不随波逐流。你的观察力敏锐，能够注意到别人忽略的细节。",
+                    personality: "理性+内向+创造",
+                    thinking: "深度思考型"
+                },
+                {
+                    title: "可靠的守护者",
+                    description: "你是一个非常可靠和负责任的人，总是会认真完成自己的任务。你性格稳重，做事踏实，是朋友们可以信赖的对象。你有很强的责任感和正义感。",
+                    personality: "感性+外向+谨慎",
+                    thinking: "务实可靠型"
+                }
+            ];
 
-        // 修复了变量名冲突：把原来的quizQuestions改成了quizContainer
-        const startQuizBtn = document.getElementById('start-quiz');
-        const quizStart = document.getElementById('quiz-start');
-        const quizContainer = document.getElementById('quiz-questions');
-        const quizResult = document.getElementById('quiz-result');
-        const nextQuestionBtn = document.getElementById('next-question');
-        const restartQuizBtn = document.getElementById('restart-quiz');
-
-        startQuizBtn.addEventListener('click', startQuiz);
-        nextQuestionBtn.addEventListener('click', nextQuestion);
-        restartQuizBtn.addEventListener('click', restartQuiz);
-
-        function startQuiz() {
-            quizStart.classList.add('hidden');
-            quizContainer.classList.remove('hidden');
-            currentQuestionIndex = 0;
-            userScores = {
+            let currentQuestionIndex = 0;
+            let userScores = {
                 rational: 0,
                 emotional: 0,
                 introvert: 0,
@@ -654,87 +648,109 @@
                 logical: 0,
                 creative: 0
             };
-            showQuestion();
-        }
 
-        function showQuestion() {
-            const question = quizQuestionsData[currentQuestionIndex];
-            document.getElementById('question-text').textContent = question.text;
-            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
-            document.getElementById('progress-percent').textContent = `${(currentQuestionIndex + 1) * 20}%`;
-            document.getElementById('progress-bar').style.width = `${(currentQuestionIndex + 1) * 20}%`;
+            const startQuizBtn = document.getElementById('start-quiz');
+            const quizStart = document.getElementById('quiz-start');
+            const quizContainer = document.getElementById('quiz-questions');
+            const quizResult = document.getElementById('quiz-result');
+            const nextQuestionBtn = document.getElementById('next-question');
+            const restartQuizBtn = document.getElementById('restart-quiz');
 
-            const optionsContainer = document.getElementById('question-options');
-            optionsContainer.innerHTML = '';
+            startQuizBtn.addEventListener('click', startQuiz);
+            nextQuestionBtn.addEventListener('click', nextQuestion);
+            restartQuizBtn.addEventListener('click', restartQuiz);
 
-            question.options.forEach((option, index) => {
-                const optionElement = document.createElement('div');
-                optionElement.className = 'option-card cursor-pointer rounded-lg overflow-hidden shadow-md card-hover border border-ink/10';
-                optionElement.innerHTML = `<img src="${option.image}" alt="选项${index + 1}" class="w-full h-32 object-cover sepia">`;
-                optionElement.addEventListener('click', () => selectOption(option, optionElement));
-                optionsContainer.appendChild(optionElement);
-            });
-
-            nextQuestionBtn.classList.add('hidden');
-        }
-
-        function selectOption(option, element) {
-            // 移除其他选项的选中状态
-            document.querySelectorAll('.option-card').forEach(card => {
-                card.classList.remove('border-accent', 'border-2');
-            });
-
-            // 添加选中状态
-            element.classList.add('border-accent', 'border-2');
-
-            // 累加分数
-            Object.keys(option.value).forEach(key => {
-                userScores[key] += option.value[key];
-            });
-
-            // 显示下一题按钮
-            nextQuestionBtn.classList.remove('hidden');
-        }
-
-        function nextQuestion() {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < quizQuestionsData.length) {
+            function startQuiz() {
+                quizStart.classList.add('hidden');
+                quizContainer.classList.remove('hidden');
+                currentQuestionIndex = 0;
+                userScores = {
+                    rational: 0,
+                    emotional: 0,
+                    introvert: 0,
+                    extrovert: 0,
+                    cautious: 0,
+                    adventurous: 0,
+                    logical: 0,
+                    creative: 0
+                };
                 showQuestion();
-            } else {
-                showResult();
+            }
+
+            function showQuestion() {
+                const question = quizQuestionsData[currentQuestionIndex];
+                document.getElementById('question-text').textContent = question.text;
+                document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+                document.getElementById('progress-percent').textContent = `${(currentQuestionIndex + 1) * 20}%`;
+                document.getElementById('progress-bar').style.width = `${(currentQuestionIndex + 1) * 20}%`;
+
+                const optionsContainer = document.getElementById('question-options');
+                optionsContainer.innerHTML = '';
+
+                question.options.forEach((option, index) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'option-card cursor-pointer rounded-lg overflow-hidden shadow-md card-hover border border-ink/10';
+                    optionElement.innerHTML = `<img src="${option.image}" alt="选项${index + 1}" class="w-full h-32 object-cover sepia">`;
+                    optionElement.addEventListener('click', () => selectOption(option, optionElement));
+                    optionsContainer.appendChild(optionElement);
+                });
+
+                nextQuestionBtn.classList.add('hidden');
+            }
+
+            function selectOption(option, element) {
+                document.querySelectorAll('.option-card').forEach(card => {
+                    card.classList.remove('border-accent', 'border-2');
+                });
+
+                element.classList.add('border-accent', 'border-2');
+
+                Object.keys(option.value).forEach(key => {
+                    userScores[key] += option.value[key];
+                });
+
+                nextQuestionBtn.classList.remove('hidden');
+            }
+
+            function nextQuestion() {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < quizQuestionsData.length) {
+                    showQuestion();
+                } else {
+                    showResult();
+                }
+            }
+
+            function showResult() {
+                quizContainer.classList.add('hidden');
+                quizResult.classList.remove('hidden');
+
+                let resultIndex = 0;
+                if (userScores.rational > userScores.emotional && userScores.introvert > userScores.extrovert) {
+                    resultIndex = 0;
+                } else if (userScores.emotional > userScores.rational && userScores.extrovert > userScores.introvert) {
+                    resultIndex = 1;
+                } else if (userScores.rational > userScores.emotional && userScores.creative > userScores.logical) {
+                    resultIndex = 2;
+                } else {
+                    resultIndex = 3;
+                }
+
+                const result = quizResults[resultIndex];
+                document.getElementById('result-title').textContent = result.title;
+                document.getElementById('result-description').textContent = result.description;
+                document.getElementById('personality-type').textContent = result.personality;
+                document.getElementById('thinking-type').textContent = result.thinking;
+            }
+
+            function restartQuiz() {
+                quizResult.classList.add('hidden');
+                quizStart.classList.remove('hidden');
             }
         }
 
-        function showResult() {
-            quizContainer.classList.add('hidden');
-            quizResult.classList.remove('hidden');
-
-            // 计算结果类型
-            let resultIndex = 0;
-            if (userScores.rational > userScores.emotional && userScores.introvert > userScores.extrovert) {
-                resultIndex = 0; // 冷静的观察者
-            } else if (userScores.emotional > userScores.rational && userScores.extrovert > userScores.introvert) {
-                resultIndex = 1; // 热情的探索者
-            } else if (userScores.rational > userScores.emotional && userScores.creative > userScores.logical) {
-                resultIndex = 2; // 深沉的思考者
-            } else {
-                resultIndex = 3; // 可靠的守护者
-            }
-
-            const result = quizResults[resultIndex];
-            document.getElementById('result-title').textContent = result.title;
-            document.getElementById('result-description').textContent = result.description;
-            document.getElementById('personality-type').textContent = result.personality;
-            document.getElementById('thinking-type').textContent = result.thinking;
-        }
-
-        function restartQuiz() {
-            quizResult.classList.add('hidden');
-            quizStart.classList.remove('hidden');
-        }
-
-        // Giscus留言板配置
-        function loadGiscus() {
+        // 初始化留言板
+        function initGiscus() {
             const script = document.createElement('script');
             script.src = 'https://giscus.app/client.js';
             script.setAttribute('data-repo', 'liushibailong/liushibailong.github.io');
@@ -753,8 +769,6 @@
             
             document.querySelector('.giscus').appendChild(script);
         }
-
-        window.addEventListener('load', loadGiscus);
     </script>
 </body>
 </html>
