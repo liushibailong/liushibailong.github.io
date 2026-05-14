@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站后台 - 流士白龙</title>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+    <script>
+        window.CMS_CONFIGURATION = {
+            config: {
+                backend: {
+                    name: 'github',
+                    repo: 'liushibailong/liushibailong.github.io',
+                    branch: 'main',
+                    base_url: 'https://api.netlify.com',
+                    auth_endpoint: 'auth'
+                },
+                media_folder: 'images',
+                public_folder: '/images',
+                collections: [
+                    {
+                        name: 'settings',
+                        label: '网站设置',
+                        files: [
+                            {
+                                name: 'content',
+                                label: '网站内容',
+                                file: 'admin/content.json',
+                                fields: [
+                                    {
+                                        label: '作者信息',
+                                        name: 'author',
+                                        widget: 'object',
+                                        fields: [
+                                            { label: '作者名字', name: 'name', widget: 'string' },
+                                            { label: '作者简介', name: 'bio', widget: 'text' }
+                                        ]
+                                    },
+                                    {
+                                        label: '作品列表',
+                                        name: 'works',
+                                        widget: 'list',
+                                        fields: [
+                                            { label: '作品标题', name: 'title', widget: 'string' },
+                                            { label: '作品简介', name: 'description', widget: 'text' },
+                                            { label: '封面图片', name: 'cover', widget: 'image' },
+                                            { label: '番茄链接', name: 'link', widget: 'string' },
+                                            { label: '作品类型', name: 'genre', widget: 'string' },
+                                            { label: '连载状态', name: 'status', widget: 'string' }
+                                        ]
+                                    },
+                                    {
+                                        label: '创作手记',
+                                        name: 'diaries',
+                                        widget: 'list',
+                                        fields: [
+                                            { label: '标题', name: 'title', widget: 'string' },
+                                            { label: '发布日期', name: 'date', widget: 'datetime' },
+                                            { label: '内容', name: 'content', widget: 'markdown' }
+                                        ]
+                                    },
+                                    {
+                                        label: '插图配音',
+                                        name: 'illustrations',
+                                        widget: 'list',
+                                        fields: [
+                                            { label: '标题', name: 'title', widget: 'string' },
+                                            { label: '描述', name: 'description', widget: 'text' },
+                                            { label: '插图', name: 'image', widget: 'image' },
+                                            { label: '配音音频', name: 'audio', widget: 'file', required: false }
+                                        ]
+                                    },
+                                    {
+                                        label: '生活相册',
+                                        name: 'gallery',
+                                        widget: 'list',
+                                        field: { label: '图片', name: 'image', widget: 'image' }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+    </script>
+</body>
+</html>
