@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "流士白龙",
+    "bio": "悬疑故事讲述者，以九十年代为底色，铺陈记忆、谎言与无法醒来的谜。"
+  },
+  "works": [
+    {
+      "title": "《昏迷》",
+      "description": "九十年代的南方小城，少年在医院醒来，记忆成谜，过去成了一道无法解开的谜题。",
+      "cover": "your-book-cover.jpg",
+      "link": "https://fanqienovel.com/page/你的作品ID",
+      "genre": "悬疑 / 年代 / 记忆",
+      "status": "连载中"
+    }
+  ],
+  "diaries": [
+    {
+      "title": "关于《昏迷》中秦卫这个角色的创作思路",
+      "date": "2026-05-15",
+      "content": "失忆不是设定，而是视角。当一个人失去过去，他与读者便站在了同一条起跑线，一起拼凑记忆的碎片。"
+    }
+  ],
+  "illustrations": [
+    {
+      "title": "第一章：醒来",
+      "description": "消毒水的味道刺鼻，天花板是模糊的白色，记忆一片空白。",
+      "image": "illustration1.jpg",
+      "audio": "audio1.mp3"
+    }
+  ],
+  "gallery": [
+    "photo1.jpg",
+    "photo2.jpg"
+  ]
+}
