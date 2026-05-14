@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流士白龙 - 悬疑小说作者</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e74c3c',
+                        secondary: '#2c3e50',
+                        accent: '#f39c12'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-secondary">流士白龙</a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.home">首页</a>
+                    <a href="#works" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.works">我的作品</a>
+                    <a href="#diary" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.diary">创作日记</a>
+                    <a href="#illustrations" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.illustrations">插图配音</a>
+                    <a href="#gallery" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.gallery">生活相册</a>
+                    <a href="#guestbook" class="nav-link text-gray-600 hover:text-primary font-medium" data-i18n="nav.guestbook">读者留言</a>
+                    <!-- 语言切换按钮 -->
+                    <button id="lang-toggle" class="text-gray-600 hover:text-primary font-medium flex items-center">
+                        <i class="fas fa-globe mr-1"></i>
+                        <span data-i18n="lang.switch">EN</span>
+                    </button>
+                </div>
+                
+                <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.home">首页</a>
+                    <a href="#works" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.works">我的作品</a>
+                    <a href="#diary" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.diary">创作日记</a>
+                    <a href="#illustrations" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.illustrations">插图配音</a>
+                    <a href="#gallery" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.gallery">生活相册</a>
+                    <a href="#guestbook" class="nav-link text-gray-600 hover:text-primary font-medium py-2" data-i18n="nav.guestbook">读者留言</a>
+                    <button id="lang-toggle-mobile" class="text-gray-600 hover:text-primary font-medium py-2 flex items-center">
+                        <i class="fas fa-globe mr-1"></i>
+                        <span data-i18n="lang.switch">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 首页 -->
+        <section id="home" class="mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4 text-shadow">流士白龙</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8" data-i18n="bio">
+                    悬疑小说作者，专注于90年代背景下的都市悬疑故事创作。
+                    擅长用细腻的笔触描绘时代细节，用层层递进的悬念抓住读者。
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#works" class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-i18n="button.viewWorks">
+                        查看我的作品
+                    </a>
+                    <a href="#guestbook" class="bg-gray-200 hover:bg-gray-300 text-secondary font-bold py-3 px-6 rounded-lg transition duration-300" data-i18n="button.leaveMessage">
+                        给我留言
+                    </a>
+                </div>
+            </div>
+
+            <!-- 核心版权声明 -->
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-8">
+                <h3 class="text-xl font-bold text-yellow-800 mb-3">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    <span data-i18n="copyright.title">重要版权声明</span>
+                </h3>
+                <p class="text-yellow-700 mb-2" data-i18n="copyright.line1">
+                    本网站展示的小说作品《XXX》（替换为你的书名），已<strong>独家签约番茄小说</strong>。
+                </p>
+                <p class="text-yellow-700 mb-2" data-i18n="copyright.line2">
+                    该作品全球范围内的全部著作财产权，独家授权给北京臻鼎科技有限公司所有。
+                </p>
+                <p class="text-yellow-700 mb-2" data-i18n="copyright.line3">
+                    本网站仅用于作者个人创作交流与作品宣传，不提供任何作品的完整阅读或下载服务。
+                    完整正版内容请前往番茄小说APP阅读。
+                </p>
+                <p class="text-yellow-700" data-i18n="copyright.line4">
+                    未经平台书面授权，任何单位或个人不得转载、复制、传播本作品的任何内容。
+                </p>
+            </div>
+        </section>
+
+        <!-- 我的作品 -->
+        <section id="works" class="mb-16">
+            <h2 class="text-3xl font-bold text-secondary mb-8 pb-2 border-b-2 border-primary inline-block">
+                <i class="fas fa-book mr-2"></i>
+                <span data-i18n="section.works">我的作品</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="your-book-cover.jpg" alt="《XXX》封面" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <h3 class="text-2xl font-bold text-secondary mb-3">《XXX》（替换为你的书名）</h3>
+                            <p class="text-gray-600 mb-4" data-i18n="work.desc">
+                                90年代的福州，一个失忆的少年在医院醒来，身边只有一张写着"秦卫"的纸条。
+                                随着记忆的碎片逐渐拼凑，他发现自己卷入了一场跨越十年的阴谋之中...
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500 mb-4">
+                                <span class="mr-4" data-i18n="work.genre"><i class="fas fa-tag mr-1"></i>悬疑 / 都市 / 年代</span>
+                                <span data-i18n="work.status"><i class="fas fa-pen-fancy mr-1"></i>连载中</span>
+                            </div>
+                            <a href="https://fanqienovel.com/page/你的作品ID" target="_blank" 
+                               class="inline-block bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300" data-i18n="button.readOnFanqie">
+                                前往番茄小说阅读正版
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 创作日记 -->
+        <section id="diary" class="mb-16">
+            <h2 class="text-3xl font-bold text-secondary mb-8 pb-2 border-b-2 border-primary inline-block">
+                <i class="fas fa-pencil-alt mr-2"></i>
+                <span data-i18n="section.diary">创作日记</span>
+            </h2>
+            
+            <div class="space-y-8">
+                <article class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-secondary" data-i18n="diary.title1">关于《XXX》中秦卫这个角色的创作思路</h3>
+                        <span class="text-gray-500 text-sm">2026-05-15</span>
+                    </div>
+                    <div class="prose max-w-none text-gray-600 mb-4" data-i18n="diary.content1">
+                        <p>很多读者问我为什么要写一个失忆的主角。其实在我看来，失忆不仅仅是一个悬疑设定，更是一个让读者和主角一起探索真相的视角。秦卫不知道自己是谁，不知道自己过去做过什么，他和读者站在同一条起跑线上，一起拼凑记忆的碎片...</p>
+                    </div>
+                    <button class="text-primary hover:text-red-700 font-medium" data-i18n="button.readMore">
+                        阅读全文 <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </article>
+            </div>
+
+            <div class="text-center mt-8">
+                <button class="bg-gray-200 hover:bg-gray-300 text-secondary font-bold py-2 px-6 rounded-lg transition duration-300" data-i18n="button.viewMoreDiary">
+                    查看更多日记
+                </button>
+            </div>
+        </section>
+
+        <!-- 插图配音 -->
+        <section id="illustrations" class="mb-16">
+            <h2 class="text-3xl font-bold text-secondary mb-8 pb-2 border-b-2 border-primary inline-block">
+                <i class="fas fa-paint-brush mr-2"></i>
+                <span data-i18n="section.illustrations">插图配音</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="illustration1.jpg" alt="医院醒来" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-secondary mb-2" data-i18n="illustration.title1">第一章：医院醒来</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-i18n="illustration.desc1">
+                            秦卫在一片白色中醒来，消毒水的味道刺鼻。他看着天花板，脑子里一片空白...
+                        </p>
+                        <audio controls class="w-full">
+                            <source src="audio1.mp3" type="audio/mpeg">
+                            <span data-i18n="audio.notSupport">您的浏览器不支持音频播放。</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生活相册 -->
+        <section id="gallery" class="mb-16">
+            <h2 class="text-3xl font-bold text-secondary mb-8 pb-2 border-b-2 border-primary inline-block">
+                <i class="fas fa-camera mr-2"></i>
+                <span data-i18n="section.gallery">生活相册</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item">
+                    <img src="photo1.jpg" alt="写作日常" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item">
+                    <img src="photo2.jpg" alt="福州街景" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 读者留言板 -->
+        <section id="guestbook" class="mb-16">
+            <h2 class="text-3xl font-bold text-secondary mb-8 pb-2 border-b-2 border-primary inline-block">
+                <i class="fas fa-comments mr-2"></i>
+                <span data-i18n="section.guestbook">读者留言</span>
+            </h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-secondary mb-4" data-i18n="guestbook.title">留下你的脚印</h3>
+                <p class="text-gray-600 mb-6" data-i18n="guestbook.desc">
+                    欢迎在这里留下你的阅读感想、建议或者想对我说的话。我会认真阅读每一条留言。
+                </p>
+                
+                <div class="giscus">
+                    <p class="text-center text-gray-500 py-8" data-i18n="guestbook.loading">
+                        留言板加载中...<br>
+                        如果长时间无法加载，请检查网络连接。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">流士白龙</h3>
+                    <p class="text-gray-300" data-i18n="footer.tagline">悬疑小说作者 | 90年代故事讲述者</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl transition duration-300">
+                        <i class="fab fa-weibo"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl transition duration-300">
+                        <i class="fab fa-wechat"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:your-email@example.com" class="text-gray-300 hover:text-white text-2xl transition duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-600 my-6">
+            
+            <div class="text-center text-gray-400 text-sm">
+                <p data-i18n="footer.copyright">&copy; 2026 流士白龙 个人主页 | 所有签约作品版权归对应平台所有</p>
+                <p class="mt-2" data-i18n="footer.disclaimer">本网站仅用于作者个人创作交流与作品宣传，不提供任何商业服务</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片灯箱 -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <!-- 翻译功能JS -->
+    <script>
+        // 语言包
+        const translations = {
+            'zh-CN': {
+                'lang.switch': 'EN',
+                'nav.home': '首页',
+                'nav.works': '我的作品',
+                'nav.diary': '创作日记',
+                'nav.illustrations': '插图配音',
+                'nav.gallery': '生活相册',
+                'nav.guestbook': '读者留言',
+                'bio': '悬疑小说作者，专注于90年代背景下的都市悬疑故事创作。擅长用细腻的笔触描绘时代细节，用层层递进的悬念抓住读者。',
+                'button.viewWorks': '查看我的作品',
+                'button.leaveMessage': '给我留言',
+                'button.readMore': '阅读全文',
+                'button.viewMoreDiary': '查看更多日记',
+                'button.readOnFanqie': '前往番茄小说阅读正版',
+                'copyright.title': '重要版权声明',
+                'copyright.line1': '本网站展示的小说作品《XXX》（替换为你的书名），已<strong>独家签约番茄小说</strong>。',
+                'copyright.line2': '该作品全球范围内的全部著作财产权，独家授权给北京臻鼎科技有限公司所有。',
+                'copyright.line3': '本网站仅用于作者个人创作交流与作品宣传，不提供任何作品的完整阅读或下载服务。完整正版内容请前往番茄小说APP阅读。',
+                'copyright.line4': '未经平台书面授权，任何单位或个人不得转载、复制、传播本作品的任何内容。',
+                'section.works': '我的作品',
+                'section.diary': '创作日记',
+                'section.illustrations': '插图配音',
+                'section.gallery': '生活相册',
+                'section.guestbook': '读者留言',
+                'work.desc': '90年代的福州，一个失忆的少年在医院醒来，身边只有一张写着"秦卫"的纸条。随着记忆的碎片逐渐拼凑，他发现自己卷入了一场跨越十年的阴谋之中...',
+                'work.genre': '悬疑 / 都市 / 年代',
+                'work.status': '连载中',
+                'diary.title1': '关于《XXX》中秦卫这个角色的创作思路',
+                'diary.content1': '很多读者问我为什么要写一个失忆的主角。其实在我看来，失忆不仅仅是一个悬疑设定，更是一个让读者和主角一起探索真相的视角。秦卫不知道自己是谁，不知道自己过去做过什么，他和读者站在同一条起跑线上，一起拼凑记忆的碎片...',
+                'illustration.title1': '第一章：医院醒来',
+                'illustration.desc1': '秦卫在一片白色中醒来，消毒水的味道刺鼻。他看着天花板，脑子里一片空白...',
+                'audio.notSupport': '您的浏览器不支持音频播放。',
+                'guestbook.title': '留下你的脚印',
+                'guestbook.desc': '欢迎在这里留下你的阅读感想、建议或者想对我说的话。我会认真阅读每一条留言。',
+                'guestbook.loading': '留言板加载中...<br>如果长时间无法加载，请检查网络连接。',
+                'footer.tagline': '悬疑小说作者 | 90年代故事讲述者',
+                'footer.copyright': '&copy; 2026 流士白龙 个人主页 | 所有签约作品版权归对应平台所有',
+                'footer.disclaimer': '本网站仅用于作者个人创作交流与作品宣传，不提供任何商业服务'
+            },
+            'en': {
+                'lang.switch': '中文',
+                'nav.home': 'Home',
+                'nav.works': 'My Works',
+                'nav.diary': 'Writing Diary',
+                'nav.illustrations': 'Illustrations & Audio',
+                'nav.gallery': 'Life Gallery',
+                'nav.guestbook': 'Guestbook',
+                'bio': 'A mystery fiction author focusing on urban suspense stories set in the 1990s. I excel at depicting period details with vivid prose and building suspense that keeps readers hooked.',
+                'button.viewWorks': 'View My Works',
+                'button.leaveMessage': 'Leave a Message',
+                'button.readMore': 'Read Full Article',
+                'button.viewMoreDiary': 'View More Diaries',
+                'button.readOnFanqie': 'Read on Fanqie Novel',
+                'copyright.title': 'Important Copyright Notice',
+                'copyright.line1': 'The novel 《XXX》 displayed on this website has been <strong>exclusively signed with Fanqie Novel</strong>.',
+                'copyright.line2': 'All property rights of the work worldwide are exclusively licensed to Beijing Zhending Technology Co., Ltd.',
+                'copyright.line3': 'This website is only used for author\'s personal creative communication and work promotion. It does not provide complete reading or download services for any works. Please go to the Fanqie Novel APP to read the full legitimate content.',
+                'copyright.line4': 'Without written authorization from the platform, no unit or individual may reproduce, copy, or disseminate any content of this work.',
+                'section.works': 'My Works',
+                'section.diary': 'Writing Diary',
+                'section.illustrations': 'Illustrations & Audio',
+                'section.gallery': 'Life Gallery',
+                'section.guestbook': 'Guestbook',
+                'work.desc': 'Fuzhou in the 1990s. An amnesiac teenager wakes up in a hospital with only a note with "Qin Wei" written on it. As pieces of his memory come together, he discovers he is caught in a conspiracy spanning a decade...',
+                'work.genre': 'Suspense / Urban / Period',
+                'work.status': 'Serializing',
+                'diary.title1': 'Creative Ideas Behind the Character Qin Wei in 《XXX》',
+                'diary.content1': 'Many readers ask why I wrote an amnesiac protagonist. In my opinion, amnesia is not just a suspense setting, but a perspective that allows readers and the protagonist to explore the truth together. Qin Wei doesn\'t know who he is or what he did in the past. He is on the same starting line as the readers, piecing together fragments of memory...',
+                'illustration.title1': 'Chapter 1: Waking Up in the Hospital',
+                'illustration.desc1': 'Qin Wei wakes up in a sea of white, the smell of disinfectant stinging his nose. He stares at the ceiling, his mind completely blank...',
+                'audio.notSupport': 'Your browser does not support audio playback.',
+                'guestbook.title': 'Leave Your Footprint',
+                'guestbook.desc': 'Feel free to leave your reading thoughts, suggestions, or anything you want to say to me. I will read every message carefully.',
+                'guestbook.loading': 'Loading guestbook...<br>If it doesn\'t load for a long time, please check your network connection.',
+                'footer.tagline': 'Mystery Fiction Author | Storyteller of the 1990s',
+                'footer.copyright': '&copy; 2026 Liushi Bailong Personal Homepage | All signed works belong to the respective platforms',
+                'footer.disclaimer': 'This website is only used for author\'s personal creative communication and work promotion, no commercial services are provided'
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || navigator.language || 'zh-CN';
+        if (!translations[currentLang]) {
+            currentLang = 'zh-CN';
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.documentElement.lang = lang;
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            setLanguage(currentLang === 'zh-CN' ? 'en' : 'zh-CN');
+        });
+
+        document.getElementById('lang-toggle-mobile').addEventListener('click', () => {
+            setLanguage(currentLang === 'zh-CN' ? 'en' : 'zh-CN');
+        });
+
+        setLanguage(currentLang);
+
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // 图片灯箱功能
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImg.src = imgSrc;
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Giscus留言板配置
+        function loadGiscus() {
+            const script = document.createElement('script');
+            script.src = 'https://giscus.app/client.js';
+            script.setAttribute('data-repo', 'liushibailong/liushibailong.github.io');
+            script.setAttribute('data-repo-id', '你的仓库ID');
+            script.setAttribute('data-category', 'Announcements');
+            script.setAttribute('data-category-id', '你的分类ID');
+            script.setAttribute('data-mapping', 'pathname');
+            script.setAttribute('data-strict', '0');
+            script.setAttribute('data-reactions-enabled', '1');
+            script.setAttribute('data-emit-metadata', '0');
+            script.setAttribute('data-input-position', 'bottom');
+            script.setAttribute('data-theme', 'light');
+            script.setAttribute('data-lang', 'zh-CN');
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+            
+            document.querySelector('.giscus').appendChild(script);
+        }
+
+        window.addEventListener('load', loadGiscus);
+    </script>
+</body>
+</html>
